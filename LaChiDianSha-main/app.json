@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/classify/classify",
+    "pages/storeDetails/storeDetails",
+    "pages/city/city",
+    "template/goodsHome/goodsHome",
+    "template/goodsNoHome/goodsNoHome",
+    "pages/chihuoquan/chihuoquan",
+    "pages/mine/mine"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#d81e06",
+    "navigationBarTitleText": "吃啥",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#d81e06",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "icons/home.png",
+        "selectedIconPath": "icons/selecthome.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/chihuoquan/chihuoquan",
+        "iconPath": "icons/chiquan.png",
+        "selectedIconPath": "icons/selectchiquan.png",
+        "text": "吃货圈"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "iconPath": "icons/mine.png",
+        "selectedIconPath": "icons/selectmine.png",
+        "text": "吃货本货"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

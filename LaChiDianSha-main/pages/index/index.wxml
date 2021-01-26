@@ -1,0 +1,40 @@
+<scroll-view class="page-scroll" scroll-y="{{true}}" bindscrolltolower="scrollBottom">
+  
+  <!-- 头部 -->
+  <view class="main-header">
+    <navigator url="/pages/city/city" hover-class="none" class="city mh-in">
+      <text class="city-text">{{currentCity}}</text>
+      <text class="iconfont icon-jiantou city-icon"></text>
+    </navigator>
+    <navigator hover-class="none" class="search mh-in">
+      <text class="iconfont icon-yssousuo1 search-icon"></text>
+      <input placeholder="想吃点啥" ></input>
+    </navigator>
+    <navigator hover-class="none" class="user mh-in">
+      <text class="iconfont icon-yonghu user-icon"></text>
+      <text class="user-text">我的</text>
+    </navigator>
+  </view>
+  <!-- 今日状态 --> 
+ <view class="nowadays">
+    <view class="n-sup">
+      <navigator hover-class="none">
+        <image src="/common/image/index/hotlist.png" class="hotlist"/>
+        <text>美食热榜</text>
+      </navigator>
+      <navigator hover-class="none">
+        <image src="/common/image/index/dayeat.png" class="dayeat"/>
+        <text>今天吃啥</text>
+      </navigator>
+    </view>
+    <view class="pk-answer"></view>
+  </view>
+  <!-- 猜你喜欢 -->
+  <view class="guess-like">
+    <view class="like-title">猜你喜欢</view>
+    <import src="/template/goodsHome/goodsHome.wxml"/>
+    <template is="goods" data="{{forList:goodsLike}}"/>
+    <view class="requesting" wx:if="{{isRequesting}}">正在请求数据...</view>
+    <view class="on-earth" wx:if="{{isLoadAll}}">刷到底了哟，从头再来吧~</view>
+  </view>
+</scroll-view>
