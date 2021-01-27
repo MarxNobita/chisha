@@ -15,6 +15,25 @@
       <text class="user-text">我的</text>
     </navigator>
   </view>
+  <!-- 轮播图-->
+  <view class="page-section page-section-spacing swiper">
+    <swiper 
+      indicator-dots="true"
+      autoplay="true" 
+      interval="3000" 
+      circular="true"
+      previous-margin="75rpx" 
+      
+    >
+      <block wx:for="{{arrs}}" wx:key="index">
+        <swiper-item>
+           <!--<view class="swiper-item {{item}}"></view>-->
+           <image src="{{item.src}}"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view> 
+ 
   <!-- 今日状态 --> 
  <view class="nowadays">
     <view class="n-sup">
@@ -31,10 +50,10 @@
   </view>
   <!-- 猜你喜欢 -->
   <view class="guess-like">
-    <view class="like-title">猜你喜欢</view>
+    <view class="like-title">想吃啥哟</view>
     <import src="/template/goodsHome/goodsHome.wxml"/>
     <template is="goods" data="{{forList:goodsLike}}"/>
-    <view class="requesting" wx:if="{{isRequesting}}">正在请求数据...</view>
-    <view class="on-earth" wx:if="{{isLoadAll}}">刷到底了哟，从头再来吧~</view>
+    <view class="requesting" wx:if="{{isRequesting}}">正在为吃货寻找...</view>
+    <view class="on-earth" wx:if="{{isLoadAll}}">好吃的没有了呢，从头再来吧~</view>
   </view>
 </scroll-view>
