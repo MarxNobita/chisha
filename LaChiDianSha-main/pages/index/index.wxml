@@ -23,7 +23,7 @@
       interval="3000" 
       circular="true"
       previous-margin="75rpx" 
-      style='height:450rpx'
+      style='height:400rpx'
     >
       <block wx:for="{{arrs}}" wx:key="index">
         <swiper-item>
