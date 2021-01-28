@@ -1,6 +1,0 @@
-<!--components/Search/search.wxml-->
-<view class="search">
-  <input placeholder="想吃点啥" results="s" type="text"></input>
-</view>
-
-
