@@ -1,0 +1,58 @@
+<view wx:if="{{canIUse}}">
+  <view class="userinfo">
+    <image class="userinfo-avatar" src="{{src}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{nickName}}</text>
+    <image src="../../images/person/account_bg.png" class="account-bg">
+    </image>
+  </view>
+  
+ <view class='content'>
+  <view>申请获取以下权限</view>
+  <text>获得你的公开信息(昵称，头像等)</text>
+ </view>
+  
+ <button 
+ class='bottom' 
+ type='primary' 
+ open-type="getUserInfo" 
+ lang="zh_CN" 
+ bindgetuserinfo="bindGetUserInfo">
+  授权登录
+ </button>
+</view>
+  
+<view wx:else>请升级微信版本</view>
+<view class="separate"></view>
+<view class="person-list">
+  <view class="list-item">
+    <image class="item-image" src="../../icons/favorite1.png"></image>
+    <text class="item-text">我评价过的餐厅</text>
+  </view>
+  <view class="person-line"></view>
+  <view class="list-item">
+    <image class="item-image" src="../../icons/favorite2.png"></image>
+    <text class="item-text">我想吃的美食</text>
+  </view>
+  <view class="person-line"></view>
+  <view class="list-item">
+    <image class="item-image" src="../../icons/restaruant.png"></image>
+    <text class="item-text">我收藏的店铺</text>
+  </view>
+  <view class="person-line"></view>
+  <view class="list-item">
+    <image class="item-image" src="../../icons/zan.png"></image>
+    <text class="item-text">我的点赞</text>
+  </view>
+  <view class="person-line"></view>
+  <view class="list-item">
+    <image class="item-image" src="../../icons/jianyi.png"></image>
+    <text class="item-text">建议反馈</text>
+  </view>
+  <view class="person-line"></view>
+  <view class="list-item">
+    <image class="item-image" src="../../icons/share.png"></image>
+    <text class="item-text">推广邀请</text>
+  </view>
+</view>
+<view class="separate"></view>
+
